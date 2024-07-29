@@ -1,3 +1,8 @@
+# Author @ Nydia R. Varela-Rosales, M. Engel
+# Version v1 2024
+# Description : predicts cqc probability score based on FFT from simulation snapshots at different epsilon and T values
+# Requires    : tensorflow, keras, numpy, data FFT images
+
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
@@ -5,8 +10,8 @@ import sys
 
 # Parameters
 inputModel = 'best_chirality_detector_early.keras' # Input name of the model
-sizeImage  = 512         # Image size
-scaleInput = 'grayscale' # Color scale
+sizeImage  = 512                                   # Image size
+scaleInput = 'grayscale'                           # Color scale
 
 def predictChirality(img_path):
     model      = load_model(inputModel)  # load model
